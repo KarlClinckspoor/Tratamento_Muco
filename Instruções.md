@@ -25,7 +25,7 @@ Nesse guia serão fornecidas algumas instruções para o tratamento de um conjun
     * `T` (temperatura)
     * `Tau` (Tensão de cisalhamento)
     
-    Caso os dados sejam exportados com columas em outra ordem, será necessário ou reexportá-los, ou alterar o script e colocar as colunas presentes.
+    Caso os dados sejam exportados com columas em outra ordem, será necessário ou reexportá-los, ou alterar o script e colocar as colunas presentes. Para reexportar, é necessário ter o programa do reômetro, e os arquivos .rwd originais.
     
 3. Os nomes dos arquivos devem seguir a seguinte sequência, tudo em letras minúsculas, e sem caracteres com acentos e cedilhas:
     
@@ -33,8 +33,8 @@ Nesse guia serão fornecidas algumas instruções para o tratamento de um conjun
         
     Por exemplo:
     
-        caio lins 11h50 08.29.41 2018-01-24.txt
-        caio lins 09h50 08.29.41 2018-01-24.txt
+        john doe 11h50 08.29.41 2018-01-24.txt
+        john doe 09h50 08.29.41 2018-01-24.txt
         
     É importante que as horas sejam precedidas de zero, caso seja menor que 10.
     
@@ -93,10 +93,10 @@ Cada arquivo de cada experimento geralmente consiste das seguintes informações
     
 Exemplo:
 
-    C:\Users\Karl\Desktop\_Medidas\2018 04 11\Felipe Martins 9h10  09.43.03 2018-04-11.rwd
+    C:\Users\Karl\Desktop\_Medidas\2018 04 11\John Doe 9h10  09.43.03 2018-04-11.rwd
     Company / Operator: UNICAMP / IQ
     Date / Time / Version: 11.04.2018 / 09:33:02 / HAAKE RheoWin 4.30.0021
-    Substance / Sample no: Felipe Martins 9h10 / 
+    Substance / Sample no: John Doe 9h10 / 
     
     ;t / s;t_seg / s;f / Hz;omega / rad/s;G' / Pa;G'' / Pa;|G*| / Pa;|Eta*| / Pas;
     1|1;65,42;4,375;1,000;6,283;4,424;1,141;4,568;0,7271;

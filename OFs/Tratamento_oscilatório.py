@@ -102,7 +102,7 @@ def residual_exp(params, x, dataset):
 
 # todo: refactor para manter os nomes consistentes
 # todo:
-def tratamento_exponencial(files, usar_w=False, usar_f=True):
+def tratamento_exponencial(files):
     res_aj = namedtuple('Ajuste', ['nome', 'R2', 'ponto',
                                    'a', 'aerr',
                                    'b', 'berr',
@@ -137,6 +137,22 @@ def tratamento_exponencial(files, usar_w=False, usar_f=True):
                              na_values=' ')
         except Exception as e:
             print('Failed to open file', file, 'Exception {}'.format(e))
+            continue
+
+        usar_f = False
+        usar_omega = False
+
+        if 'f' in df.columns:
+            usar_f = True
+            fr = 'f'
+
+        if 'omega' in df.columns:
+            usar_w = True
+            fr = 'omega'
+
+        # todo: deixar isso passível de aceitar omega. No momento só aceita f, e passa pro próximo
+        if not usar_f:
+            print(f'O arquivo "{file}" não contém frequência em Hz. Pulando.')
             continue
 
         if usar_f and len(df['f']) == 0:

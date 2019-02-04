@@ -221,6 +221,7 @@ def check_create_dirs():
     if not os.path.isdir('./OTs'):
         os.mkdir('./OTs')
 
+
 def main(ext):
 
     if not ext:
@@ -235,7 +236,12 @@ def main(ext):
         logging.info(f'Início da separação das linhas do arquivo {arquivo}')
 
         file = open(arquivo, 'r').read().split('\n')
-        header_line, header_names = detect_header(file)
+        try:
+            header_line, header_names = detect_header(file)
+        except Exception as e:
+            print(f'Cuidado! Erro ao processar. {e}')
+            continue
+
         names = detect_columns(header_names)
 
         try:
@@ -252,28 +258,31 @@ def main(ext):
 
         check_create_dirs()
 
-        # Isso é para garantir que não exista sobreposição de arquivos
+        # todo: devo checar se ocorrerá sobrescrição?
         if type(temp_CF) != type(None):
             filename = fr'.\CFs\{arquivo}'
-            counter = 0
-            while os.path.isfile(filename):
-                filename = filename[:-4] + str(counter) + filename[-4:]
+
+            # temp_filename = filename[:]
+            # counter = 0
+            # while os.path.isfile(temp_filename):
+            #     counter += 1
+            #     temp_filename = filename[:-4] + str(counter) + filename[-4:]
 
             temp_CF.to_csv(filename, sep=';', encoding='utf8', index=False, decimal=',')
 
         if type(temp_OT) != type(None):
             filename = fr'.\OTs\{arquivo}'
-            counter = 0
-            while os.path.isfile(filename):
-                filename = filename[:-4] + str(counter) + filename[-4:]
+            #counter = 0
+            #while os.path.isfile(filename):
+            #    filename = filename[:-4] + str(counter) + filename[-4:]
 
             temp_OT.to_csv(filename, sep=';', encoding='utf8', index=False, decimal=',')
 
         if type(temp_OF) != type(None):
             filename = rf'.\OFs\{arquivo}'
-            counter = 0
-            while os.path.isfile(filename):
-                filename = filename[:-4] + str(counter) + filename[-4:]
+            #counter = 0
+            #while os.path.isfile(filename):
+            #    filename = filename[:-4] + str(counter) + filename[-4:]
 
             temp_OF.to_csv(filename, sep=';', encoding='utf8', index=False, decimal=',')
 

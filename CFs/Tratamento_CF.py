@@ -1,0 +1,4 @@
+import RheoFCClass
+
+model = 'Cross'
+

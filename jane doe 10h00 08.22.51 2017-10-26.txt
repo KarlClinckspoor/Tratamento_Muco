@@ -1,7 +1,7 @@
-C:\Users\Karl\Desktop\_Medidas\reexport\Ariane Conceição 10h  08.22.51.rwd
+C:\Users\Karl\Desktop\_Medidas\reexport\jane doe 10h  08.22.51.rwd
 Company / Operator: UNICAMP / IQ
 Date / Time / Version: 26.10.2017 / 08:08:43 / HAAKE RheoWin 4.63.0003
-Substance / Sample no: Ariane Conceição 10h / 
+Substance / Sample no: jane doe 10h / 
 
 ;t / s;t_seg / s;f / Hz;omega / rad/s;G' / Pa;G'' / Pa;|G*| / Pa;|Eta*| / Pas;
 1|1;307,9;7,274;1,000;6,283;1,069;0,4159;1,147;0,1826;

@@ -1,7 +1,7 @@
-C:\Users\Karl\Desktop\_Medidas\2017 11 21\Ariane conceicao 10h00  15.19.39 2017-11-21.rwd
+C:\Users\Karl\Desktop\_Medidas\2017 11 21\jane doe 10h00  15.19.39 2017-11-21.rwd
 Company / Operator: UNICAMP / IQ
 Date / Time / Version: 21.11.2017 / 15:05:31 / HAAKE RheoWin 4.63.0003
-Substance / Sample no: Ariane conceicao 10h00 / 
+Substance / Sample no: jane doe 10h00 / 
 
 ;t / s;t_seg / s;f / Hz;omega / rad/s;G' / Pa;G'' / Pa;|G*| / Pa;|Eta*| / Pas;
 1|1;307,9;7,247;1,000;6,283;5,228;1,393;5,411;0,8611;

@@ -378,7 +378,7 @@ class Fitter:
             print('Debug: aerr: ', self.int_err)
 
         if save:
-            self.manip.record_fit('linear', self.int, self.int_err, silent=False,
+            self.manip.record_fit(self.filename, self.int, self.int_err, silent=False,
                                   extra=f"{fittings[0][0]};{fittings[0][1]};")
 
         return self.int, self.int_err
